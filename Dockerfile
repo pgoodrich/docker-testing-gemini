@@ -4,6 +4,9 @@ MAINTAINER Jean-François Lépine <jeanfrancois@qualiboo.com>
 
 WORKDIR /var/tools
 
+# set node user context
+RUN npm -g config set user root
+
 # global packages
 RUN apt-get install -y make
 RUN npm install -g gemini gemini-gui
